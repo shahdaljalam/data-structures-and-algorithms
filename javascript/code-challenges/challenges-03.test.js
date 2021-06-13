@@ -8,7 +8,14 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   // Solution code here...
+  let newArr=[];
+  for (let i=0; i<arr.length;i++)
+  {
+    newArr.push(arr[i]+2);
+  }
+  return newArr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -18,10 +25,16 @@ Write a function named typeNum that, given an array as input, uses filter to ret
 For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
+
 const typeNum = (arr) => {
   // Solution code here...
+  let newArr=arr.filter((element)=>{
+    // return (element>0)
+    if (typeof element !== 'string')
+    return element;
+  })
+  return newArr;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -32,7 +45,10 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
+  let newArr=arr.filter((elementxz) => element.includes("and"));
+  return newArr;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
