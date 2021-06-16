@@ -70,13 +70,12 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
-  let localArrayKeys = Object.keys(obj);
-  let localArrayVals = Object.values(obj);
-  let newArray = [];
-  localArrayKeys.forEach((item, index) => {
-    newArray.push(${item}: ${localArrayVals[index]});
+  let arr=[]; 
+  let key = Object.keys(obj);
+  key.forEach(e =>{
+   arr.push(`${e}: ${obj[e]}`); 
   });
-  return newArray;
+  return arr;
 };
 
 
